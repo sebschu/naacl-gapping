@@ -42,3 +42,13 @@ The `models` directory contains the models for the Dozat and Manning (2016) pars
 The parser and tagger requires the pre-trained embeddings from the [CoNLL 2017 Shared task](http://universaldependencies.org/conll17/), which can be downloaded at
 
   https://lindat.mff.cuni.cz/repository/xmlui/handle/11234/1-1989
+  
+  
+## Enhancement code
+
+The enhancement code is built on top of Stanford CoreNLP. It uses some unreleased extensions that allow one to work with UD v2 code. To run the code, download the following two jar files:
+
+  * [Special version of Stanford CoreNLP](https://nlp.stanford.edu/~sebschu/files/javanlp-core-src.jar)
+  * [EJML 0.23](https://sourceforge.net/projects/ejml/files/v0.23/ejml-0.23.jar/download)
+  
+  
