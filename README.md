@@ -57,3 +57,6 @@ The enhancement code is built on top of Stanford CoreNLP. It uses some unrelease
       
 This will add the enhancements to a treebank annotated with `orphan` relations and output the graphs to `OUTPUT_FILE.conllu`. It will also compute the labeled and unlabeled precision and recall metrics by comparing the ouput to the graphs in `GOLD_STANDARD.conllu`.
   
+  ## Questions
+  
+  Please contact Sebastian Schuster (sebschu@stanford.edu) if you have questions about the data or running the code.
