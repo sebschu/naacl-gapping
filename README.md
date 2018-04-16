@@ -46,9 +46,14 @@ The parser and tagger requires the pre-trained embeddings from the [CoNLL 2017 S
   
 ## Enhancement code
 
-The enhancement code is built on top of Stanford CoreNLP. It uses some unreleased extensions that allow one to work with UD v2 code. To run the code, download the following two jar files:
+The enhancement code is built on top of Stanford CoreNLP. It uses some unreleased extensions that allow one to work with UD v2 code. If you want to use the enhancer, download the following two jar files:
 
   * [Special version of Stanford CoreNLP](https://nlp.stanford.edu/~sebschu/files/javanlp-core-src.jar)
   * [EJML 0.23](https://sourceforge.net/projects/ejml/files/v0.23/ejml-0.23.jar/download)
   
+  Use the following command to run the enhancer:
+  
+      java -cp javanlp-core-src.jar:ejml-0.23.jar edu.stanford.nlp.trees.ud.EnglishUDGappingEnhancer INPUT_FILE.conllu GOLD_STANDARD.conllu -embeddings embeddings.txt > OUTPUT_FILE.conllu
+      
+This will add the enhancements to a treebank annotated with `orphan` relations and output the graphs to `OUTPUT_FILE.conllu`. It will also compute the labeled and unlabeled precision and recall metrics by comparing the ouput to the graphs in `GOLD_STANDARD.conllu`.
   
